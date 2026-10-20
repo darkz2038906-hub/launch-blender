@@ -1,0 +1,13 @@
+# Blender 3.6 GPU Launcher for ChromeOS (Crostini)
+
+A simple shell script to launch Blender 3.6+ on Chromebooks running Linux (Crostini) using hardware GPU acceleration (`virpipe`) instead of software rendering.
+
+## Fixes
+- Bypasses `EGL_BAD_MATCH` / `EGL_NOT_INITIALIZED` errors.
+- Fixes `epoxy_get_proc_address` assertions.
+- Routes rendering through X11 and Mesa Virpipe GPU driver.
+
+## Usage
+```bash
+chmod +x launch-blender.sh
+./launch-blender.sh
